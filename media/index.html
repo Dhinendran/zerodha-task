@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+      .top-buffer { margin-top:50px; }
+    </style>
+    <title>Zerodha | Test Task | Rohan Chopra</title>
+  </head>
+  <body style="background-color:#F7F5E6;">
+    <div class="container">
+      <div class="row justify-content-md-end top-buffer">
+        <form class="form-inline" method="post">
+            
+            <div class="form-row">
+            <div class="form-group col-md-10">
+              <input style="background-color:#F7F5E6;" class="form-control form-control-lg" type="text" name="search" placeholder="Search...">
+            </div>
+            <div class="form-group col-md-2">
+              <!-- <button type="submit" class="btn btn-primary" style="background-color:#1FB58F;">Search</button> -->
+              <button type="submit" class="btn btn-info">
+                <img src="https://image.flaticon.com/icons/svg/34/34202.svg" width="18" height="18" alt=""> Search
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+        {% if search is defined and search|length > 0%}
+        <div class="row top-buffer">
+        <div class="table-responsive">
+          <table class="table table-dark table-striped table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th >#</th>
+              <th >Name</th>
+              <th >Open</th>
+              <th >High</th>
+              <th >Low</th>
+              <th >Close</th>
+              <th >Percent</th>
+            </tr>
+          </thead>
+          <tbody style="background-color:#EAB126;color:#000">
+            {% for item in search %}
+            <tr>
+               <td >{{loop.index}}</td>
+               <td >{{item.SC_NAME}}</td>
+               <td >{{item.OPEN}}</td>
+               <td >{{item.HIGH}}</td>
+               <td >{{item.LOW}}</td>
+               <td >{{item.CLOSE}}</td>
+               <td >{{item.PERCENTAGE}}%</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        </div>
+      </div>
+      {% endif %}
+      <div class="row">
+        <div class="table-responsive">
+            <h2>Top 10 Gainers</h2>
+          <table class="table table-dark bg-success table-striped table-hover" style="color: rgb(17, 17, 17);">
+          <thead class="thead-dark">
+            <tr>
+              <th >#</th>
+              <th >Name</th>
+              <th >Open</th>
+              <th >High</th>
+              <th >Low</th>
+              <th >Close</th>
+              <th >Percent</th>
+            </tr>
+          </thead>
+          <tbody style="background-color:#ffffff;">
+            {% for item in gainers %}
+            <tr>
+               <td >{{loop.index}}</td>
+               <td >{{item.SC_NAME}}</td>
+               <td >{{item.OPEN}}</td>
+               <td >{{item.HIGH}}</td>
+               <td >{{item.LOW}}</td>
+               <td >{{item.CLOSE}}</td>
+               <td >{{item.PERCENTAGE}}%</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        </div>
+      </div>
+    
+    </div>
+
+      <!-- Footer
+<footer class="page-footer font-small pt-4 mt-4" style="background-color:#272727;color:#fff;">
+
+    <div class="container text-center text-md-left">
+        <div class="row">
+
+            <div class="col-md-4">
+                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Zerodha Test Task</h5>
+                <p>This web application solves the python test task given by zerodha. </p>
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <div class="col-md-4 mx-auto">
+                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Rohan Chopra</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://www.linkedin.com/in/rohanchopra09/">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/09rohanchopra">Github</a>
+                    </li>
+                    <li>
+                        <a href="mailto:09rohanchopra@gmail.com?Subject=Heroku Zerodha App">Email</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+
+    <hr>
+</footer>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html> -->
+
