@@ -3,6 +3,6 @@ CherryPy==14.0.1
 redis==2.10.6
 beautifulsoup4==4.4.1
 wget==3.2
-lxml==3.5.0
+lxml==4.6.2
 pandas==0.20.2
 
